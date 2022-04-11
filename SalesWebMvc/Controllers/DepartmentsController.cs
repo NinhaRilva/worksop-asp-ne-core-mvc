@@ -6,8 +6,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
+using SelesWebMvc.Models;
 
-namespace SalesWebMvc.Controllers
+namespace SelesWebMvc.Controllers
 {
     public class DepartmentsController : Controller
     {
