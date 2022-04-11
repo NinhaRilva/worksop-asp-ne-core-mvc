@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Linq;
+
 
 namespace SalesWebMvc.Models
 {
@@ -18,6 +18,15 @@ namespace SalesWebMvc.Models
 
         public Saller()
         {
+        }
+
+        public Saller(string name, string email, DateTime birthDate, double baseSalary, Department department)
+        {
+            Name = name;
+            Email = email;
+            BirthDate = birthDate;
+            BaseSalary = baseSalary;
+            Department = department;
         }
 
         public Saller(int id, string name, string email, DateTime birthDate, double baseSalary, Department department)
