@@ -13,10 +13,6 @@ namespace SalesWebMvc.Data
     public class SeedingService
     {
         private SalesWebMvcContext _contect;
-        private int _iD;
-
-        [DatabaseGeneratedAttribute(DatabaseGeneratedOption.Identity)]
-        public int ID { get => _iD; set => _iD = value; }
 
         public SeedingService(SalesWebMvcContext contect)
         {

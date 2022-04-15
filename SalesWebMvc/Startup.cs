@@ -13,6 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
 using SelesWebMvc.Models;
 using SalesWebMvc.Data;
+using SalesWebMvc.Service;
 
 namespace SalesWebMvc
 {
@@ -42,6 +43,7 @@ namespace SalesWebMvc
                     options.UseSqlServer(Configuration.GetConnectionString("SalesWebMvcContext")));
 
             services.AddScoped<SeedingService>();
+            services.AddScoped<SellerService>();
 
         }
 
