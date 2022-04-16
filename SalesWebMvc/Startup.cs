@@ -13,7 +13,7 @@ using Microsoft.EntityFrameworkCore;
 using SalesWebMvc.Models;
 using SelesWebMvc.Models;
 using SalesWebMvc.Data;
-using SalesWebMvc.Service;
+using SalesWebMvc.Services;
 
 namespace SalesWebMvc
 {
