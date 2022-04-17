@@ -21,5 +21,25 @@ namespace SalesWebMvc.Services
             // operação sincrona para busca to os vendedore
             return _context.Saller.ToList();
         }
+         public void Insert(Saller obj)
+        {
+            _context.Add(obj);
+            _context.SaveChanges();
+        }
+        public Saller FindById(int id)
+        {
+            return _context.Saller.FirstOrDefault(obj => obj.Id == id);
+        }
+         public void Remover(int id)
+        {
+            var obj = _context.Saller.Find(id);
+            _context.Saller.Remove(obj);
+            _context.SaveChanges();
+
+        }
+        public  void Edit(int id)
+        {
+
+        }
     }
 }
