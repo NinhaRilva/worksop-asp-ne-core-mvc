@@ -39,13 +39,21 @@ namespace SalesWebMvc.Services
 
          public async Task RemoveAsync(int id)
         {
+            try
+            {
+
             var obj = _context.Saller.Find(id);
             _context.Saller.Remove(obj);
             await _context.SaveChangesAsync();
 
+            }
+            catch(DbUpdateException e)
+            {
+                throw new IntergrityException(e.Message);
+            }
         }
 
-        public async Task   UpdateAsync(Saller obj)
+        public async Task UpdateAsync(Saller obj)
         {
             bool temAlgum = await _context.Saller.AnyAsync(x => x.Id == obj.Id);
             if (!temAlgum)
